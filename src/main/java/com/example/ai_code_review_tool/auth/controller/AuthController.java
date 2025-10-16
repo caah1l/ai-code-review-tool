@@ -4,8 +4,10 @@ import com.example.ai_code_review_tool.auth.dto.AuthResponseDTO;
 import com.example.ai_code_review_tool.auth.dto.LoginRequestDTO;
 import com.example.ai_code_review_tool.auth.dto.RegisterRequestDTO;
 import com.example.ai_code_review_tool.auth.service.AuthService;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

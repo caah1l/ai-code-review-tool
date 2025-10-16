@@ -5,10 +5,13 @@ import com.example.ai_code_review_tool.auth.dto.LoginRequestDTO;
 import com.example.ai_code_review_tool.auth.dto.RegisterRequestDTO;
 import com.example.ai_code_review_tool.auth.model.User;
 import com.example.ai_code_review_tool.auth.repository.UserRepository;
+import com.example.ai_code_review_tool.config.JwtService;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 
+@Service
 public class AuthService {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
@@ -48,6 +51,6 @@ public class AuthService {
         }
 
         String token = jwtService.generateToken(user.getUsername());
-        return new AuthResponseDTO(token);
+        return new AuthResponseDTO(token,"Bearer");
     }
 }
