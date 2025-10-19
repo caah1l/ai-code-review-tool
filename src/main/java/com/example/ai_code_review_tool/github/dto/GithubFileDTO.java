@@ -10,4 +10,5 @@ import lombok.NoArgsConstructor;
 public class GithubFileDTO {
     private String filename;
     private String status;
+    private String patch;
 }

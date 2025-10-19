@@ -14,4 +14,13 @@ public class GithubPrDetailsDTO {
     private String title;
     private String description;
     private List<GithubFileDTO> changedFiles;
+
+    @Data
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class ChangedFile {
+        private String filename;
+        private String status;
+        private String patch;
+    }
 }
