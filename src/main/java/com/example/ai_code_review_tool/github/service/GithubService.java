@@ -56,8 +56,8 @@ public class GithubService {
         List<GithubFileDTO> files = filesData.stream()
                 .map(f -> new GithubFileDTO(
                         (String) f.get("filename"),
-                        (String) f.get("status")
-                       // (String) f.get("patch")
+                        (String) f.get("status"),
+                        (String) f.get("patch")
 
                 ))
                 .toList();
