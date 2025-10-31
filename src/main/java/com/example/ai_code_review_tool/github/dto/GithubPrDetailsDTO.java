@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -13,7 +14,8 @@ public class GithubPrDetailsDTO {
     private String prUrl;
     private String title;
     private String description;
-    private List<GithubFileDTO> changedFiles;
+   // private List<GithubFileDTO> changedFiles;
+    private List<GithubFileDTO> changedFiles = new ArrayList<>();
 
     @Data
     @NoArgsConstructor
