@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ReviewService {
@@ -39,5 +40,10 @@ public class ReviewService {
 
     public List<Review> getReviewsByUser(User user) {
         return reviewRepository.findByUser(user);
+    }
+
+    public Optional<Review> getReviewById(Long id, User user) {
+        return reviewRepository.findById(id)
+                .filter(r -> r.getUser().equals(user));
     }
 }
